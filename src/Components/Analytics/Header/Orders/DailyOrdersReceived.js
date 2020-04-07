@@ -1,9 +1,10 @@
 import React from 'react';
-import { Grid, Paper, Icon } from '@material-ui/core';
+import { Icon } from '@material-ui/core';
 
-import './Revenue.css';
+// import css stylesheet
+import './DailyOrdersReceived.css';
 
-class Revenue extends React.Component {
+class DailyOrdersReceived extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -12,12 +13,12 @@ class Revenue extends React.Component {
         return (
             <div className="small-analytics-container">
                 <div className="small-analytics-upper">
-                    <div className="image-analytics-header-container">
+                    <div className="image-analytics-header-container" id="daily-orders-icon">
                         <Icon className="image-analytics-icon" >payment</Icon>
                     </div>
                     <div className="text-analytics-header-container">
-                        <p>Revenue</p>
-                        <h3>13,984 Dhs</h3>
+                        <p>Orders</p>
+                        <h3>{this.props.dailyOrdersReceived}</h3>
                     </div>
                 </div>
                 {/* Icon */}
@@ -27,8 +28,8 @@ class Revenue extends React.Component {
                     <span style={{ marginLeft: 10, fontFamily: 'roboto', color: "#999" }}>Last 24 hours</span>
                 </div>
             </div>
-        );
+        )
     }
 }
 
-export default Revenue;
+export default DailyOrdersReceived;
