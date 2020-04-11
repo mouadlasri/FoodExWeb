@@ -16,7 +16,7 @@ class BodyPieChartAndTable extends React.Component {
 
     render() {
         return (
-            <Grid container spacing={2} style={{ backgroundColor: '', height: '40vh', marginTop: 20 }}>
+            <Grid container spacing={4} style={{ backgroundColor: '', height: '', marginTop: 20 }}>
                 <Grid item xs={12} sm={3} md={3} lg={3} >
                     <PieChartCategories />
                 </Grid>

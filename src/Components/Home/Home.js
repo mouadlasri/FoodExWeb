@@ -4,6 +4,9 @@ import { Grid, Paper} from '@material-ui/core';
 // import custom components
 import MainNavigation from './MainNavigation';
 
+// import styling
+import './Home.css';
+
 const mainContainer = {
     height: '100%',
     borderStyle: 'solid',
@@ -19,20 +22,40 @@ class Home extends React.Component {
 
     render() {
         return (
-            <Grid container spacing={0} style={{ backgroundColor: 'brown', height: "100vh" }}>
-                {/* Left Navigation */}
-                <Grid item xs={12} sm={3} md={2} lg={2}>
-                    <div style={{  backgroundColor: 'red', height: "100vh" }}>
+            <div className="app-container">
+                <div className="sidebar">
+                    <ul style={{color: 'white'}}>
+                        <li>First Item</li>
+                        <li>Second Item</li>
+                        <li>Third Item</li>
+                    </ul>
+                </div>
+                <div className="main-navigation">
+                    <Grid item xs={12} sm={12} md={12} lg={12} style={{}}>
+                        {/* Main Navigation */}
+                        <MainNavigation />
+                    </Grid>
+                </div>
+            </div>
+            // <Grid container spacing={0} style={{ backgroundColor: 'brown', height: "100%" }}>
+            //     {/* Left Navigation */}
+            //     <Grid item xs={12} sm={3} md={2} lg={2} >
+            //         <div style={{ height: "100%" }} >
+            //             <ul>
+            //                 <li>First Item</li>
+            //                 <li>Second Item</li>
+            //                 <li>Third Item</li>
 
-                    </div>
-                </Grid>
+            //             </ul>
+            //         </div>
+            //     </Grid>
                 
                 
-                <Grid item xs={12} sm={9} md={10} lg={10} style={{ backgroundColor: '#eeeeee' }}>
-                    {/* Main Navigation */}
-                    <MainNavigation />
-                </Grid>
-            </Grid>
+                // <Grid item xs={12} sm={9} md={10} lg={10} style={{ backgroundColor: '#eeeeee', height: "100%" }}>
+                //     {/* Main Navigation */}
+                //     <MainNavigation />
+                // </Grid>
+            // </Grid>
                
         );
     }

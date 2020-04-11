@@ -3,7 +3,9 @@ import { Grid, Paper } from '@material-ui/core';
 
 // import custom components
 import HeaderAnalytics from '../Analytics/Header/HeaderAnalytics';
-import BodyPieChartAndTable from '../BodyPieChartAndTable/BodyPieChartAndTable';
+import TopCategoriesAndRecentOrders from '../Analytics/TopCategoriesAndRecentOrders/BodyPieChartAndTable';
+import Graphs from '../Analytics/Graphs/Graphs';
+
 
 const mainContainer = {
     height: '100%',
@@ -24,7 +26,10 @@ class MainNavigation extends React.Component {
             <div style={{ paddingLeft: 30, paddingRight: 30 }}>
                 {/* Nested Grid to show first analytics in the header */}
                 <HeaderAnalytics />
-                <BodyPieChartAndTable />
+                <TopCategoriesAndRecentOrders />
+                <Graphs />
+               
+
             </div>
             
         );

@@ -22,13 +22,17 @@ class PieChartCategories extends React.Component {
     componentDidMount() {
         axios.get('https://localhost:44312/api/RestaurantAnalytics/1/topCategories').then(response => {
             console.log(response.data);
+            // local variables that will hold the response data
             var localData = [];
             var localLabels = [];
+
+            // loop through the response data and fill the local variables
             for (var i = 0; i < response.data.length; i++) {
                 localData.push(response.data[i].totalOrdered);
                 localLabels.push(response.data[i].itemName);
             }
 
+            // set the state of the component with the local data
             this.setState({
                 data: localData,
                 labels: localLabels

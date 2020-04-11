@@ -52,7 +52,7 @@ class HeaderAnalytics extends React.Component {
     render() {
       
         return (
-            <Grid container spacing={2} style={{ backgroundColor: '', height: '20vh', marginTop: 20}}>
+            <Grid container spacing={4} style={{ backgroundColor: '', height: '20vh', marginTop: 20}}>
                 <Grid item lg={3}>
                     <DailyRevenue dailyRevenue={this.state.dailyRevenue} />
                 </Grid>
