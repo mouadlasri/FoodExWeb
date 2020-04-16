@@ -5,12 +5,12 @@ import { Grid, Paper, Icon } from '@material-ui/core';
 import axios from 'axios';
 
 // import css stylesheet
-import './PieChartCategories.css';
+import './TopItemsCategoriesPieChart.css';
 import { Doughnut, Pie } from 'react-chartjs-2';
 
 
 
-class PieChartCategories extends React.Component {
+class TopItemsCategoriesPieChart extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -72,7 +72,7 @@ class PieChartCategories extends React.Component {
             maintainAspectRatio: false,
             height: '20%',
             width: '10%'
-            
+
         }
 
         if (this.state.data.length > 0 && this.state.labels.length > 0) {
@@ -97,8 +97,8 @@ class PieChartCategories extends React.Component {
                 </div>
             )
         }
-        
+
     }
 }
 
-export default PieChartCategories;
+export default TopItemsCategoriesPieChart;

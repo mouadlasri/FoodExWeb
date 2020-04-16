@@ -19,7 +19,7 @@ import HistoryIcon from '@material-ui/icons/History';
 import { Link, Router, NavLink } from 'react-router-dom';
 
 // import styling
-import './LeftNavigation.css';
+import './Sidebar.css';
 
 const classes = {
     active: {
@@ -27,7 +27,7 @@ const classes = {
     }
 }
 
-class LeftNavigation extends React.Component {
+class Sidebar extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -96,4 +96,4 @@ class LeftNavigation extends React.Component {
     }
 }
 
-export default LeftNavigation;
+export default Sidebar;

@@ -4,12 +4,12 @@ import axios from 'axios';
 
 // Import custom components
 import DailyRevenue from './Revenue/DailyRevenue';
-import DailyUsers from './Users/DailyUsers';
+import DailyUsers from './DailyUsers/DailyUsers';
 import DailyOrdersReceived from './Orders/DailyOrdersReceived';
 import TotalRevenue from './Revenue/TotalRevenue';
 
 // Import Style
-import './HeaderAnalytics.css';
+import './DailyAnalyticsHeader.css';
 
 const test = {
     borderStyle: 'solid',
@@ -20,7 +20,7 @@ const test = {
 
 }
 
-class HeaderAnalytics extends React.Component {
+class DailyAnalyticsHeader extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -70,4 +70,4 @@ class HeaderAnalytics extends React.Component {
     }
 }
 
-export default HeaderAnalytics;
+export default DailyAnalyticsHeader;

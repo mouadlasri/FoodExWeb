@@ -37,11 +37,11 @@ class RecentOrdersTable extends React.Component {
         switch (orderStatus) {
             // fontfamily: 'Roboto', fontSize: 30, fontWeight: 'bold'
             case 0:
-                return { color: 'crimson', fontSize: 12}
+                return { color: 'crimson', fontSize: 12 }
             case 1:
                 return { color: '#1e88e5', fontSize: 12 }
             case 2:
-                return { color: '#1A5632', fontSize: 12}
+                return { color: '#1A5632', fontSize: 12 }
         }
     }
 
@@ -59,7 +59,7 @@ class RecentOrdersTable extends React.Component {
 
 
     render() {
-       
+
         if (this.state.recentOrders) {
             return (
                 <div className="recent-orders-container">
@@ -110,7 +110,7 @@ class RecentOrdersTable extends React.Component {
                 </div>
             )
         }
-      
+
     }
 }
 

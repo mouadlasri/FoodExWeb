@@ -1,15 +1,28 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import BarChartIcon from '@material-ui/icons/BarChart';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+
 // import custom css
 import './UsersActivityBarChart.css';
 
 class UsersActivityBarChart extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            timePeriod: ''
+        }
     }
 
-
+    handleChange = (event) => {
+        this.setState({
+            timePeriod: event.target.value
+        });
+    }
 
     render() {
         const data = {
@@ -37,14 +50,30 @@ class UsersActivityBarChart extends React.Component {
         return (
             <div className="users-activity-analytics-container">
                 <div className="users-activity-analytics-upper">
-                    <div className="image-analytics-header-container" id="daily-orders-icon">
+                    {/* <div className="image-analytics-header-container" id="daily-orders-icon">
                         <BarChartIcon className="image-analytics-icon" ></BarChartIcon>
-                    </div>
+                    </div> */}
                     <div className="text-analytics-header-container">
-                        <p style={{ fontFamily: 'Roboto', color: '#3C4858', fontSize: '20px' }}>User Activity</p>
+                        <p style={{ fontFamily: 'Roboto', color: '#3C4858', fontSize: '20px', marginTop: '5px', marginLeft: '5px' }}>User Activity</p>
                     </div>
                     <div style={{ float: 'right' }} >
-                        <p>Test</p>
+                        <FormControl variant="outlined" style={{ marginTop: '10px', marginRight: '10px' }}>
+                            <Select
+                                value={this.state.timePeriod}
+                                displayEmpty
+                                onChange={this.handleChange}
+                                inputProps={{ 'aria-label': 'Without label' }}
+                            >
+                                <MenuItem value="" disabled >
+                                    Last Week
+                                </MenuItem>
+                                <MenuItem value={'Last Week'}>Last Week</MenuItem>
+                                <MenuItem value={'Last Month'}>Last Month</MenuItem>
+                                <MenuItem value={'This Week'}>This Week</MenuItem>
+                                <MenuItem value={'This Month'}>This Month</MenuItem>
+
+                            </Select>
+                        </FormControl>
                     </div>
 
                 </div>

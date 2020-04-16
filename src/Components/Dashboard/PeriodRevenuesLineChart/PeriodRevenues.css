@@ -26,3 +26,17 @@
     height: 15%;
 
 }
+
+.text-analytics-header-container p {
+    
+}
+
+.timeline-selection-text {
+    padding: 10px 10px;
+    padding-right: 32px;
+}
+
+.MuiSelect-outlined.MuiSelect-outlined {
+    padding: 10px 10px !important;
+    padding-right: 32px !important;
+}
