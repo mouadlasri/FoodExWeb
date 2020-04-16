@@ -31,6 +31,7 @@ class MainNavigation extends React.Component {
                 {/* Nested Grid to show first analytics in the header */}
                 <HeaderAnalytics />
                 <TopCategoriesAndRecentOrders />
+
                 <Grid container spacing={4} style={{ backgroundColor: '', marginTop: 20 }}>
                     <Grid item xs={12} sm={4} md={4} lg={4} >
                         <PieChartCategories />
@@ -40,6 +41,8 @@ class MainNavigation extends React.Component {
                     </Grid>
 
                 </Grid>
+
+                
                 <TrendingOrders />
                 {/* <Graphs /> */}
 

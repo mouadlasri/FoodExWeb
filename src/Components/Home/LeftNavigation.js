@@ -11,13 +11,12 @@ import GroupIcon from '@material-ui/icons/Group';
 import LocalDiningIcon from '@material-ui/icons/LocalDining';
 
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
-// Three vertical dots
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
-import DraftsIcon from '@material-ui/icons/Drafts';
 import HistoryIcon from '@material-ui/icons/History';
 
+import { Link, Router, NavLink } from 'react-router-dom';
 
 // import styling
 import './LeftNavigation.css';
@@ -34,10 +33,11 @@ class LeftNavigation extends React.Component {
     }
    
     render() {
+
         return (
                 <div className='root'>
                     <List component="nav" aria-label="main mailbox folders">
-                    <ListItem className="test-item" button style={{ color: '#848995' }} selected={true} classes={{ selected: classes.active }} hover={{backgroundColor: 'green'}}>
+                        <ListItem className="test-item" button style={{ color: '#848995' }} component={NavLink} to="/dashboard" >
                             <ListItemIcon>
                                 <DashboardIcon />
                             </ListItemIcon>
@@ -51,11 +51,11 @@ class LeftNavigation extends React.Component {
                             <ListItemText primary="Users" />
                         </ListItem>
 
-                        <ListItem button>
+                        <ListItem button component={NavLink} to="/orders">
                             <ListItemIcon>
                                 <LocalDiningIcon />
                             </ListItemIcon>
-                            <ListItemText primary="Orders" />
+                            <ListItemText primary="Orders"  />
                         </ListItem>
 
                         <ListItem button>
@@ -90,6 +90,7 @@ class LeftNavigation extends React.Component {
                         </ListItem>
                     </List>
                 </div>
+                
             
         )
     }
