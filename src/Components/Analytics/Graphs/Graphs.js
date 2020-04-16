@@ -16,13 +16,12 @@ class Graphs extends React.Component {
         return (
             <div>
                 <Grid container spacing={4} style={{ backgroundColor: '', height: '30vh', marginTop: 20 }}>
-                    <Grid item xs={12} sm={4} md={4} lg={4} >
+                    <Grid item xs={12} sm={4} md={4} lg={6} >
                         <WeekRevenues />
                     </Grid>
-                    <Grid item xs={12} sm={4} md={4} lg={4}>
+                    <Grid item xs={12} sm={4} md={4} lg={6}>
                     </Grid>
-                    <Grid item xs={12} sm={4} md={4} lg={4}>
-                    </Grid>
+                    
                 </Grid>
             </div>
         );

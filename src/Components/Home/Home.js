@@ -3,6 +3,7 @@ import { Grid, Paper} from '@material-ui/core';
 
 // import custom components
 import MainNavigation from './MainNavigation';
+import LeftNavigation from './LeftNavigation';
 
 // import styling
 import './Home.css';
@@ -24,11 +25,7 @@ class Home extends React.Component {
         return (
             <div className="app-container">
                 <div className="sidebar">
-                    <ul style={{color: 'white'}}>
-                        <li>First Item</li>
-                        <li>Second Item</li>
-                        <li>Third Item</li>
-                    </ul>
+                   <LeftNavigation />
                 </div>
                 <div className="main-navigation">
                     <Grid item xs={12} sm={12} md={12} lg={12} style={{}}>
