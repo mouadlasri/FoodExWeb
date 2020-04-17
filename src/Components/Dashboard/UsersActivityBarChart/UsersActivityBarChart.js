@@ -30,7 +30,7 @@ class UsersActivityBarChart extends React.Component {
             datasets: [
                 {
                     label: 'My First dataset',
-                    backgroundColor: 'rgba(255,99,132,0.2)',
+                    backgroundColor: '#df296a',
                     borderColor: 'rgba(255,99,132,1)',
                     borderWidth: 1,
                     hoverBackgroundColor: 'rgba(255,99,132,0.4)',

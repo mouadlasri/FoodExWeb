@@ -11,6 +11,9 @@ import RecentOrders from './RecentOrdersTable/RecentOrdersTable';
 import DailyAnalyticsHeader from './DailyAnalyticsHeader/DailyAnalyticsHeader';
 
 
+// Icons
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
@@ -19,7 +22,10 @@ class Dashboard extends React.Component {
     render() {
         return (
             <div style={{ paddingLeft: 30, paddingRight: 30 }}>
-
+                <div className="page-title">
+                    <MoreVertIcon className="page-title-icon">Dashboard</MoreVertIcon>
+                    <h3>Dashboard</h3>
+                </div>
                 {/* Nested Grid to show first analytics in the header */}
                 <DailyAnalyticsHeader />
 
@@ -29,6 +35,19 @@ class Dashboard extends React.Component {
                         <PeriodRevenuesLineChart />
                     </Grid>
                     <Grid item xs={12} sm={4} md={4} lg={6}>
+                        <UsersActivityBarChart />
+                    </Grid>
+                </Grid>
+
+                {/* Line Chart of Revenues periodically + Bar Chart of User Activities (# orders) periodically */}
+                <Grid container spacing={4} style={{ marginTop: 20 }}>
+                    <Grid item xs={12} sm={4} md={4} lg={4} >
+                        <PeriodRevenuesLineChart />
+                    </Grid>
+                    <Grid item xs={12} sm={4} md={4} lg={4}>
+                        <UsersActivityBarChart />
+                    </Grid>
+                    <Grid item xs={12} sm={4} md={4} lg={4}>
                         <UsersActivityBarChart />
                     </Grid>
                 </Grid>

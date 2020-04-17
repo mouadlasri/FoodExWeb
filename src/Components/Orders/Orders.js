@@ -1,5 +1,9 @@
 import React from 'react';
 
+// Icons
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+
+
 class Orders extends React.Component {
     constructor(props) {
         super(props);
@@ -7,8 +11,11 @@ class Orders extends React.Component {
 
     render() {
         return (
-            <div style={{height: '100%', backgroundColor: 'red'}}>
-                <h1>TEEEEEEST ORDERS PAGE </h1>
+            <div style={{ paddingLeft: 30, paddingRight: 30 }}>
+                <div className="page-title">
+                    <MoreVertIcon className="page-title-icon">Dashboard</MoreVertIcon>
+                    <h3>Orders</h3>
+                </div>
             </div>
         )
     }

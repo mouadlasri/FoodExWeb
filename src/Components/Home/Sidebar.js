@@ -1,5 +1,4 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -15,6 +14,9 @@ import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import HistoryIcon from '@material-ui/icons/History';
+
+import {Avatar} from '@material-ui/core';
+
 
 import { Link, Router, NavLink } from 'react-router-dom';
 
@@ -35,61 +37,69 @@ class Sidebar extends React.Component {
     render() {
 
         return (
-                <div className='root'>
-                    <List component="nav" aria-label="main mailbox folders">
-                        <ListItem className="test-item" button style={{ color: '#848995' }} component={NavLink} to="/dashboard" >
-                            <ListItemIcon>
-                                <DashboardIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Dashboard" />
-                        </ListItem>
+            <div className='root'>
+                <div style={{alignItems: 'center', height: '10%'}}>
 
-                        <ListItem button>
-                            <ListItemIcon>
-                                <GroupIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Users" />
-                        </ListItem>
-
-                        <ListItem button component={NavLink} to="/orders">
-                            <ListItemIcon>
-                                <LocalDiningIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Orders"  />
-                        </ListItem>
-
-                        <ListItem button>
-                            <ListItemIcon>
-                                <ShoppingBasketIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Items" />
-                        </ListItem>
-
-                        <ListItem button>
-                            <ListItemIcon>
-                                <HistoryIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="History" />
-                        </ListItem>
-                    </List>
-                    <Divider />
-                    <List component="nav" aria-label="secondary mailbox folder">
-                        <ListItem
-                            button
-                        >
-                            <ListItemIcon>
-                                <LibraryBooksIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Feedback" />
-                        </ListItem>
-                        <ListItem button >
-                            <ListItemIcon>
-                                <ExitToAppIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Logout" />
-                        </ListItem>
-                    </List>
+                    <h3 className="restaurant-title">Proxirest</h3>
                 </div>
+
+                <Divider className="sidebar-divider" />
+
+
+                <List component="nav" aria-label="main mailbox folders">
+                    <ListItem activeClassName="active-list-item" button style={{ color: '#848995' }}  component={NavLink} to="/dashboard" >
+                        <ListItemIcon>
+                            <DashboardIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Dashboard" />
+                    </ListItem>
+
+                    <ListItem activeClassName="active-list-item" button>
+                        <ListItemIcon>
+                            <GroupIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Users" />
+                    </ListItem>
+
+                    <ListItem activeClassName="active-list-item" button component={NavLink} to="/orders">
+                        <ListItemIcon>
+                            <LocalDiningIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Orders"  />
+                    </ListItem>
+
+                    <ListItem activeClassName="active-list-item" button>
+                        <ListItemIcon>
+                            <ShoppingBasketIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Items" />
+                    </ListItem>
+
+                    <ListItem activeClassName="active-list-item" button>
+                        <ListItemIcon>
+                            <HistoryIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="History" />
+                    </ListItem>
+                </List>
+                
+                <Divider className="sidebar-divider" />
+                
+                <List component="nav" aria-label="secondary mailbox folder" >
+                    <ListItem activeClassName="active-list-item" button>
+                        <ListItemIcon>
+                            <LibraryBooksIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Feedback" />
+                    </ListItem>
+                    <ListItem activeClassName="active-list-item" button>
+                        <ListItemIcon>
+                            <ExitToAppIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Logout" />
+                    </ListItem>
+                </List>
+            </div>
                 
             
         )

@@ -44,6 +44,9 @@ class Home extends React.Component {
                         
                         {/* Switch Router with the routes */}
                         <Switch>
+                            <Route exact path="/">
+                                <Dashboard />
+                            </Route>
                             <Route exact path="/dashboard">
                                 <Dashboard />
                             </Route>

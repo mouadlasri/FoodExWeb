@@ -19,7 +19,7 @@ class TotalRevenue extends React.Component {
                     </div>
                     <div className="text-analytics-header-container">
                         <p>Total Revenue</p>
-                        <h3>{this.props.totalRevenue}</h3>
+                        <h3>{this.props.totalRevenue} Dhs</h3>
                     </div>
                 </div>
                 {/* Icon */}
