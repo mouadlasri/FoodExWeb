@@ -25,6 +25,7 @@
 }
 
 .active-list-item {
+  
   color: #FFF !important;
   box-shadow: 0 12px 20px -10px rgba(0, 172, 193,.28), 0 4px 20px 0 rgba(0, 0, 0,.12), 0 7px 8px -5px rgba(0, 172, 193,.2) !important;
   background-color: #00acc1 !important;
@@ -39,20 +40,23 @@
 
 /* Item Text */
 .MuiTypography-body1 {
+
   font-weight: lighter !important;
-  font-size: 14px !important;
 }
 
 /* Item Text + Icon */
 .MuiTypography-body1, .MuiListItemIcon-root  {
+  font-size: 14px !important;
+
     color: white !important;
 }
 
 /*  Avatar  */
 .MuiAvatar-root {
+
   margin: 0 auto !important;
-  width: 75px !important;
-  height: 75px !important;
+  width: 85px !important;
+  height: 85px !important;
 }
 
 .restaurant-title {

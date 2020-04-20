@@ -18,23 +18,19 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Pagination from "@material-ui/lab/Pagination";
 import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
-import Fab from '@material-ui/core/Fab';
-import DeleteIcon from '@material-ui/icons/Delete';
-import IconButton from '@material-ui/core/IconButton';
-import Tooltip from '@material-ui/core/Tooltip';
-import AddIcon from '@material-ui/icons/Add';
-import Badge from '@material-ui/core/Badge';
+import TelegramIcon from '@material-ui/icons/Telegram';
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 
 import Button from '@material-ui/core/Button';
 
-// styling
-import './InProgressOrders.css';
 
-class InProgressOrders extends React.Component {
+// styling
+import './ReadyToPickupOrders.css';
+
+class ReadyToPickupOrders extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            inProgressOrders: null,
             dataLoaded: false,
             page: 1,
             rowsPerPage: 8,
@@ -64,20 +60,21 @@ class InProgressOrders extends React.Component {
 
     render() {
         const { page, rowsPerPage } = this.state;
-        const data  = this.props.inProgressOrders;
+        const data = this.props.readyToPickupOrders;
 
-        var inProgressOrders = this.props.inProgressOrders.slice((page - 1) * rowsPerPage, (page - 1) * rowsPerPage + rowsPerPage).map((order, index) => {
+        var readyToPickUpOrders = this.props.readyToPickupOrders.slice((page - 1) * rowsPerPage, (page - 1) * rowsPerPage + rowsPerPage).map((order, index) => {
             return (
                 <Grid item xs={6} sm={4} md={2} lg={3} key={index} >
                     <div className="order-container" >
-                        <div className="order-container-header" style={{ borderTopLeftRadius: '6px', borderTopRightRadius: '6px', paddingTop: '5px', paddingBottom: '5px', backgroundColor: '#650808 ' }}>
-                            <p style={{ color: 'white', fontFamily: 'Roboto', fontSize: '16px' }}>Ordered {new Date(order.dateOrdered).toLocaleString()}</p>
+                        <div className="order-container-header" style={{ borderTopLeftRadius: '6px', borderTopRightRadius: '6px', paddingTop: '5px', paddingBottom: '5px', backgroundColor: '#F5B335' }}>
+                            <p style={{ color: 'white', fontFamily: 'Roboto' }}>Ordered {new Date(order.dateOrdered).toLocaleString()}</p>
+
                         </div>
                         <div className="order-container-items">
                             <p className="order-text-title">Order by: {order.firstName} {order.lastName} - {order.userId}</p>
                             <p className="order-text-date">Order ID: PXT{order.orderId}</p>
 
-                            <p style={{ margin: 0, padding: 0, textAlign: 'left', fontWeight: 'bold', paddingLeft:'10px' }}>Order Details</p>
+                            <p style={{ margin: 0, padding: 0, textAlign: 'center', fontWeight: 'bold' }}>Ready To Pick Up Details</p>
                             <TableContainer component={Paper} >
                                 <Table aria-label="simple table" >
                                     <TableHead>
@@ -120,9 +117,9 @@ class InProgressOrders extends React.Component {
 
                         </div>
                         <div className="order-container-footer">
-                            <Button variant="outlined" color="primary" className="complete-order-button" onClick={() => this.props.completeOrder(order)}>
-                                Complete Order
-                            </Button>   
+                            <Button variant="outlined" color="primary" className="ready-to-pick-up-order-button">
+                                Deliver Order
+                            </Button>
                         </div>
                     </div>
 
@@ -133,23 +130,17 @@ class InProgressOrders extends React.Component {
         });
 
         return (
-            <div style = {{ width: '100%' } }  className="in-progress-orders-header">
+            <div style={{ width: '100%', marginTop: '20px' }} className="ready-to-pick-up-orders-header">
                 <ExpansionPanel defaultExpanded={true}>
                     <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-                        <div style={{ display: 'flex', alignItems: 'center' }} className="test">
-                            <AccessAlarmIcon style={{ height: '45px', width: '45px', color: 'white' }} />
-                            <p style={{ fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '18px', color: 'white' }}>In-Progress Orders</p>
-                            {/* <Tooltip title="Add" aria-label="add" style={{marginLeft: '10px'}}>
-                                <Fab color="primary">
-                                    <span style={{fontSize: '24px'}}>{this.props.inProgressOrders.length}</span>
-                                    
-                                </Fab>
-                            </Tooltip> */}
+                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                            <CheckCircleIcon style={{ height: '45px', width: '45px', color: 'white' }} />
+                            <p style={{ fontFamily: 'Roboto', paddingLeft: '10px', fontSize: '18px', color: 'white' }}>Ready To Pick Up Orders</p>
                         </div>
                     </ExpansionPanelSummary>
                     <ExpansionPanelDetails>
                         <Grid container spacing={3}>
-                            {inProgressOrders}
+                            {readyToPickUpOrders}
                         </Grid>
                     </ExpansionPanelDetails>
                     {/* Pagination Component */}
@@ -162,8 +153,8 @@ class InProgressOrders extends React.Component {
                 </ExpansionPanel>
             </div >
         )
-        
+
     }
 }
 
-export default InProgressOrders;
+export default ReadyToPickupOrders;

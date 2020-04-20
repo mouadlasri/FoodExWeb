@@ -39,7 +39,6 @@ class Sidebar extends React.Component {
         return (
             <div className='root'>
                 <div style={{alignItems: 'center', height: '10%'}}>
-
                     <h3 className="restaurant-title">Proxirest</h3>
                 </div>
 
@@ -54,18 +53,18 @@ class Sidebar extends React.Component {
                         <ListItemText primary="Dashboard" />
                     </ListItem>
 
+                    <ListItem activeClassName="active-list-item" button component={NavLink} to="/orders">
+                        <ListItemIcon>
+                            <LocalDiningIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Orders" />
+                    </ListItem>
+                    
                     <ListItem activeClassName="active-list-item" button>
                         <ListItemIcon>
                             <GroupIcon />
                         </ListItemIcon>
                         <ListItemText primary="Users" />
-                    </ListItem>
-
-                    <ListItem activeClassName="active-list-item" button component={NavLink} to="/orders">
-                        <ListItemIcon>
-                            <LocalDiningIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Orders"  />
                     </ListItem>
 
                     <ListItem activeClassName="active-list-item" button>

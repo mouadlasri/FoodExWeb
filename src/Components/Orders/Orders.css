@@ -1,0 +1,77 @@
+.item-avatar {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+
+/* CHange item name color */
+.item-name span {
+    color: black !important;
+}
+
+.order-container-header {
+    
+}
+
+.order-container {
+    color: rgba(0, 0, 0, 0.87);
+    width: 100%;
+    border: 0;
+    font-size: .875rem;
+    background: #FFF;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    border-radius: 6px;
+    height: 100%;
+    justify-self: center;
+    margin-top: 10%;
+}
+
+.order-text-title {
+    color: #3C4858;
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-size: 16px;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    margin: 5px;
+}
+
+.order-text-date {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    color: #999;
+    font-size: 12px;
+    font-family: 'Helvetica';
+    margin: 5px;
+}
+
+
+.order-text-date, .order-text-title {
+    padding: 5px 10px;
+    text-align: center;
+}
+
+
+nav.MuiPagination-root {
+    text-align: center;
+    padding-top: 30px !important;
+    padding-bottom: 10px !important;
+}
+
+
+/* table padding to show */
+td.MuiTableCell-root.MuiTableCell-body.item-details-table {
+    padding: 5px 0px !important;
+    font-size: 12px;
+}
+
+
+.order-container-footer {
+    height: 15%;
+}
+
+
+.MuiPaper-elevation1 {
+    box-shadow: none !important;
+}

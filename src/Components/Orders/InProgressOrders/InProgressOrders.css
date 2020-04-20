@@ -1,0 +1,22 @@
+
+
+.in-progress-orders-header div#panel1a-header {
+    background-color: #650808  !important;
+}
+
+
+
+.complete-order-button {
+    color: rgb(101, 8, 8) !important;
+    border: 1px solid rgb(101, 8, 8) !important;
+    margin: 0 auto;
+    position: relative;
+    top: 28%;
+    padding: 10px 10px !important;
+    border-radius: 0 !important;
+}
+
+.complete-order-button:hover {
+    color: white !important;
+    background-color: rgb(101, 8, 8) !important;
+}
