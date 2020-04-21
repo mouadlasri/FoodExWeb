@@ -92,12 +92,51 @@ class Orders extends React.Component {
     
     // Complete order
     completeOrder = (order) => {
-        console.log('Order clicked: ', order);
-        
-        // push the order into the complete orders array
+        // create a local copy of the state orders in progress
+        var ordersInProgress = [...this.state.inProgressOrders];
+        var orderIndexToRemove = ordersInProgress.indexOf(order);
+
+        // remove it from the local variable
+        ordersInProgress.splice(orderIndexToRemove, 1);
+        console.log('In Progress Without Order: ', ordersInProgress);
+        console.log('Index of order to remove:', orderIndexToRemove);
+        // push the order into the complete orders array and remove it from the in-progress orders
         this.setState({
+            inProgressOrders: ordersInProgress,
             readyToPickupOrders: [order, ...this.state.readyToPickupOrders]
         });
+
+        axios.post('https://localhost:44312/api/Restaurants/1/DeliverOrder', null, { params: { orderId: order.orderId } }).then(response => {
+            if (response.status == 200) {
+                console.log(`Order with id: ${order.orderId} was completed`);
+            } else {
+                console.log(`Could not complete order with id ${order.orderId}`);
+            }
+        }).catch(error => console.log(error));
+    }
+
+    // Deliver order
+    deliverOrder = (order) => {
+        // create a local copy of the state orders in progress
+        var ordersCompleted = [...this.state.readyToPickupOrders];
+        var orderIndexToRemove = ordersCompleted.indexOf(order);
+
+        // remove it from the local variable
+        ordersCompleted.splice(orderIndexToRemove, 1);
+
+        // push the order into the complete orders array and remove it from the in-progress orders
+        this.setState({
+            readyToPickupOrders: ordersCompleted,
+            deliveredOrders: [order, ...this.state.deliveredOrders]
+        });
+
+        axios.post('https://localhost:44312/api/Restaurants/1/DeliverOrder', null, { params: { orderId: order.orderId } }).then(response => {
+            if (response.status == 200) {
+                console.log(`Order with id: ${order.orderId} was completed`);
+            } else {
+                console.log(`Could not complete order with id ${order.orderId}`);
+            }
+        }).catch(error => console.log(error));
     }
 
 
@@ -108,7 +147,7 @@ class Orders extends React.Component {
  
     render() {
         console.log('Rows per page: ', this.state.rowsPerPage);
-        if (this.state.inProgressOrders == null) {
+        if (this.state.inProgressOrders == null || this.state.readyToPickupOrders == null || this.state.deliveredOrders == null) {
             return (
                 <div>Loading Data...</div>
             )
@@ -123,9 +162,9 @@ class Orders extends React.Component {
                     <h3>Orders</h3>
                 </div>
 
-                <InProgressOrders inProgressOrders={data} completeOrder={this.completeOrder} />
+                <InProgressOrders inProgressOrders={this.state.inProgressOrders} completeOrder={this.completeOrder} />
 
-                <ReadyToPickupOrders readyToPickupOrders={this.state.readyToPickupOrders} />
+                <ReadyToPickupOrders readyToPickupOrders={this.state.readyToPickupOrders} deliverOrder={this.deliverOrder}/>
                 
                 <DeliveredOrders deliveredOrders={this.state.deliveredOrders} />
             </div>

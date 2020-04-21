@@ -117,7 +117,7 @@ class ReadyToPickupOrders extends React.Component {
 
                         </div>
                         <div className="order-container-footer">
-                            <Button variant="outlined" color="primary" className="ready-to-pick-up-order-button">
+                            <Button variant="outlined" color="primary" className="ready-to-pick-up-order-button" onClick={() => this.props.deliverOrder(order)}>
                                 Deliver Order
                             </Button>
                         </div>

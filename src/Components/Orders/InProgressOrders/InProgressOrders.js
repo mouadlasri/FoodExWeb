@@ -34,7 +34,6 @@ class InProgressOrders extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            inProgressOrders: null,
             dataLoaded: false,
             page: 1,
             rowsPerPage: 8,
