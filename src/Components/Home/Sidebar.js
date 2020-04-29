@@ -60,32 +60,32 @@ class Sidebar extends React.Component {
                         <ListItemText primary="Orders" />
                     </ListItem>
                     
-                    <ListItem activeClassName="active-list-item" button>
+                    <ListItem activeClassName="active-list-item" button component={NavLink} to="/users">
                         <ListItemIcon>
                             <GroupIcon />
                         </ListItemIcon>
                         <ListItemText primary="Users" />
                     </ListItem>
 
-                    <ListItem activeClassName="active-list-item" button>
+                    <ListItem activeClassName="active-list-item" button component={NavLink} to="/items">
                         <ListItemIcon>
                             <ShoppingBasketIcon />
                         </ListItemIcon>
                         <ListItemText primary="Items" />
                     </ListItem>
 
-                    <ListItem activeClassName="active-list-item" button>
+                    {/* <ListItem activeClassName="active-list-item" button>
                         <ListItemIcon>
                             <HistoryIcon />
                         </ListItemIcon>
                         <ListItemText primary="History" />
-                    </ListItem>
+                    </ListItem> */}
                 </List>
                 
                 <Divider className="sidebar-divider" />
                 
                 <List component="nav" aria-label="secondary mailbox folder" >
-                    <ListItem activeClassName="active-list-item" button>
+                    <ListItem activeClassName="active-list-item" button component={NavLink} to="/feedback">
                         <ListItemIcon>
                             <LibraryBooksIcon />
                         </ListItemIcon>

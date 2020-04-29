@@ -10,8 +10,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Sidebar from './Sidebar';
 import Orders from '../Orders/Orders';
 import Items from '../Items/Items';
-
-
+import Users from '../Users/Users';
+import Feedback from '../Feedback/Feedback';
 // import styling
 import './Home.css';
 import Dashboard from '../Dashboard/Dashboard';
@@ -52,6 +52,15 @@ class Home extends React.Component {
                             </Route>
                             <Route path="/orders">
                                 <Orders />
+                            </Route>
+                            <Route path="/users">
+                                <Users />
+                            </Route>
+                            <Route path="/items">
+                                <Items />
+                            </Route>
+                            <Route path="/feedback">
+                                <Feedback />
                             </Route>
                         </Switch>
 

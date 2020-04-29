@@ -36,11 +36,11 @@ class RecentOrdersTable extends React.Component {
         // console.log('Waiting Time => ', waitingTime);
         switch (orderStatus) {
             // fontfamily: 'Roboto', fontSize: 30, fontWeight: 'bold'
-            case 0:
-                return { color: 'crimson', fontSize: 12 }
             case 1:
-                return { color: '#1e88e5', fontSize: 12 }
+                return { color: 'crimson', fontSize: 12 }
             case 2:
+                return { color: '#1e88e5', fontSize: 12 }
+            case 3:
                 return { color: '#1A5632', fontSize: 12 }
         }
     }
@@ -48,11 +48,11 @@ class RecentOrdersTable extends React.Component {
     // Dynamically change the text of the order status
     orderStatusText = (orderStatus) => {
         switch (orderStatus) {
-            case 0:
-                return 'In-Progress';
             case 1:
-                return 'Ready to pick up';
+                return 'In-Progress';
             case 2:
+                return 'Ready to pick up';
+            case 3:
                 return 'Delivered'
         }
     }

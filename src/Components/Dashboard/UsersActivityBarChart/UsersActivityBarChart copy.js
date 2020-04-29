@@ -17,7 +17,7 @@ class UsersActivityBarChart extends React.Component {
         var dataValues = [];
         for (var i = 0; i < 7; i++) {
 
-            dataValues.push(Math.ceil(Math.random() * (400 - 100) + 100));
+            dataValues.push(Math.random() * (400 - 100) + 100);
 
         }
         this.state = {
@@ -57,7 +57,7 @@ class UsersActivityBarChart extends React.Component {
             var dataValues = [];
             for (var i = 0; i < 30; i++) {
                 
-                dataValues.push(Math.ceil(Math.random() * (1200 - 430) + 430));
+                dataValues.push(Math.random() * (1200 - 430) + 430);
 
             }
 
@@ -66,7 +66,7 @@ class UsersActivityBarChart extends React.Component {
                     labels: days,
                     datasets: [
                         {
-                            label: 'User Activity',
+                            label: 'My First dataset',
                             backgroundColor: '#df296a',
                             borderColor: 'rgba(255,99,132,1)',
                             borderWidth: 1,

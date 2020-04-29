@@ -10,6 +10,9 @@ import TopItemsCategoriesPieChart from './TopItemsCategoriesPieChart/TopItemsCat
 import RecentOrders from './RecentOrdersTable/RecentOrdersTable';
 import DailyAnalyticsHeader from './DailyAnalyticsHeader/DailyAnalyticsHeader';
 
+import OrdersDelivered from './UsersActivityBarChart/OrdersDelivered';
+import AverageTimeSpent from './UsersActivityBarChart/AverageTimeSpent';
+import UserEngagementChart from './UsersActivityBarChart/UserEngagementChart';
 
 // Icons
 import MoreVertIcon from '@material-ui/icons/MoreVert';
@@ -42,13 +45,13 @@ class Dashboard extends React.Component {
                 {/* Line Chart of Revenues periodically + Bar Chart of User Activities (# orders) periodically */}
                 <Grid container spacing={4} style={{ marginTop: 20 }}>
                     <Grid item xs={12} sm={4} md={4} lg={4} >
-                        <PeriodRevenuesLineChart />
+                        <UserEngagementChart />
                     </Grid>
                     <Grid item xs={12} sm={4} md={4} lg={4}>
-                        <UsersActivityBarChart />
+                        <AverageTimeSpent />
                     </Grid>
                     <Grid item xs={12} sm={4} md={4} lg={4}>
-                        <UsersActivityBarChart />
+                        <OrdersDelivered />
                     </Grid>
                 </Grid>
 

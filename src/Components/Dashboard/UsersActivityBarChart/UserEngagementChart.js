@@ -10,7 +10,7 @@ import Select from '@material-ui/core/Select';
 // import custom css
 import './UsersActivityBarChart.css';
 
-class UsersActivityBarChart extends React.Component {
+class UserEngagementChart extends React.Component {
     constructor(props) {
         super(props);
 
@@ -26,13 +26,13 @@ class UsersActivityBarChart extends React.Component {
                     labels: [17, 18, 19, 20, 21, 22, 23],
                     datasets: [
                         {
-                            label: 'User Activity',
-                            backgroundColor: '#df296a',
-                            borderColor: 'rgba(255,99,132,1)',
+                            label: 'User Engagement',
+                            backgroundColor: 'rgba(67, 160, 71, 1)',
+                            borderColor: 'rgba(67, 160, 71, 1',
                             borderWidth: 1,
-                            hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-                            hoverBorderColor: 'rgba(255,99,132,1)',
-                            data: [123, 150, 110, 100, 80, 350, 100]
+                            hoverBackgroundColor: 'rgba(67, 160, 71, 0.4)',
+                            hoverBorderColor: 'rgba(67, 160, 71, 1)',
+                            data: [120, 70, 50, 150, 200, 40, 76]
                         }
                     ]
                 }
@@ -57,7 +57,7 @@ class UsersActivityBarChart extends React.Component {
             var dataValues = [];
             for (var i = 0; i < 30; i++) {
                 
-                dataValues.push(Math.ceil(Math.random() * (1200 - 430) + 430));
+                dataValues.push(Math.random() * (1200 - 430) + 430);
 
             }
 
@@ -66,7 +66,7 @@ class UsersActivityBarChart extends React.Component {
                     labels: days,
                     datasets: [
                         {
-                            label: 'User Activity',
+                            label: 'User Engagement',
                             backgroundColor: '#df296a',
                             borderColor: 'rgba(255,99,132,1)',
                             borderWidth: 1,
@@ -98,12 +98,12 @@ class UsersActivityBarChart extends React.Component {
                     labels: days,
                     datasets: [
                         {
-                            label: 'User Activity',
-                            backgroundColor: '#df296a',
-                            borderColor: 'rgba(255,99,132,1)',
+                            label: 'User Engagement',
+                            backgroundColor: 'rgba(67, 160, 71, 1)',
+                            borderColor: 'rgba(67, 160, 71, 1',
                             borderWidth: 1,
-                            hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-                            hoverBorderColor: 'rgba(255,99,132,1)',
+                            hoverBackgroundColor: 'rgba(67, 160, 71, 0.4)',
+                            hoverBorderColor: 'rgba(67, 160, 71, 1)',
                             data: dataValues
                         }
                     ]
@@ -128,7 +128,7 @@ class UsersActivityBarChart extends React.Component {
                         <BarChartIcon className="image-analytics-icon" ></BarChartIcon>
                     </div> */}
                         <div className="text-analytics-header-container">
-                            <p style={{ fontFamily: 'Roboto', color: '#3C4858', fontSize: '20px', marginTop: '5px', marginLeft: '5px' }}>User Activity</p>
+                            <p style={{ fontFamily: 'Roboto', color: '#3C4858', fontSize: '20px', marginTop: '5px', marginLeft: '5px' }}>User Engagement</p>
                         </div>
                         <div style={{ float: 'right' }} >
                             <FormControl variant="outlined" style={{ marginTop: '10px', marginRight: '10px' }}>
@@ -160,4 +160,4 @@ class UsersActivityBarChart extends React.Component {
     };
 }
 
-export default UsersActivityBarChart;
+export default UserEngagementChart;

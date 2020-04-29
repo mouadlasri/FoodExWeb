@@ -58,7 +58,7 @@ class InProgressOrders extends React.Component {
             total += parseFloat(order.itemsOrdered[i].itemPrice).toFixed(2) * parseFloat(order.itemsOrdered[i].itemQuantity).toFixed(2);
         }
         // console.log('Order: ', order);
-        return total;
+        return parseFloat(total).toFixed(2);
     }
 
     render() {

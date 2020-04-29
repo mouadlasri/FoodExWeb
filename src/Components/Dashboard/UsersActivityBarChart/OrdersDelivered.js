@@ -10,7 +10,7 @@ import Select from '@material-ui/core/Select';
 // import custom css
 import './UsersActivityBarChart.css';
 
-class UsersActivityBarChart extends React.Component {
+class OrdersDelivered extends React.Component {
     constructor(props) {
         super(props);
 
@@ -26,8 +26,8 @@ class UsersActivityBarChart extends React.Component {
                     labels: [17, 18, 19, 20, 21, 22, 23],
                     datasets: [
                         {
-                            label: 'User Activity',
-                            backgroundColor: '#df296a',
+                            label: 'Orders Delivered',
+                            backgroundColor: '#e53935',
                             borderColor: 'rgba(255,99,132,1)',
                             borderWidth: 1,
                             hoverBackgroundColor: 'rgba(255,99,132,0.4)',
@@ -66,7 +66,7 @@ class UsersActivityBarChart extends React.Component {
                     labels: days,
                     datasets: [
                         {
-                            label: 'User Activity',
+                            label: 'Orders Delivered',
                             backgroundColor: '#df296a',
                             borderColor: 'rgba(255,99,132,1)',
                             borderWidth: 1,
@@ -98,7 +98,7 @@ class UsersActivityBarChart extends React.Component {
                     labels: days,
                     datasets: [
                         {
-                            label: 'User Activity',
+                            label: 'Orders Delivered',
                             backgroundColor: '#df296a',
                             borderColor: 'rgba(255,99,132,1)',
                             borderWidth: 1,
@@ -128,7 +128,7 @@ class UsersActivityBarChart extends React.Component {
                         <BarChartIcon className="image-analytics-icon" ></BarChartIcon>
                     </div> */}
                         <div className="text-analytics-header-container">
-                            <p style={{ fontFamily: 'Roboto', color: '#3C4858', fontSize: '20px', marginTop: '5px', marginLeft: '5px' }}>User Activity</p>
+                            <p style={{ fontFamily: 'Roboto', color: '#3C4858', fontSize: '20px', marginTop: '5px', marginLeft: '5px' }}>Orders Delivered</p>
                         </div>
                         <div style={{ float: 'right' }} >
                             <FormControl variant="outlined" style={{ marginTop: '10px', marginRight: '10px' }}>
@@ -160,4 +160,4 @@ class UsersActivityBarChart extends React.Component {
     };
 }
 
-export default UsersActivityBarChart;
+export default OrdersDelivered;
